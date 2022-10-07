@@ -9,12 +9,6 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
     <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
@@ -26,57 +20,58 @@
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
+      <p id="currentDay"></p>
+      <p id="currentDate" class="lead"></p>
     </header>
     <div class="container d-flex flex-column align-items-center">
-      <div class="row w-75" id="hour-9">
-        <span class="hour col-2">9AM</span>
-        <textarea class="col-8"></textarea>
-        <button class="col-2"></button>
+      <div class="row w-75" id="hour-9-container">
+        <span class="hour col-2"><span class="hourNumbers" id="hour-9">9</span>AM</span>
+        <textarea class="col-8 textInput0"></textarea>
+        <button class="col-2 saveBtn"><i class="fa-regular fa-floppy-disk"></i></button>
       </div>
-       <div class="row w-75" id="hour-10">
-        <span class="hour col-2">10AM</span>
-        <textarea class="col-8"></textarea>
-        <button class="col-2"></button>
+       <div class="row w-75" id="hour-10-container">
+        <span class="hour col-2"><span class="hourNumbers" id="hour-10">10</span>AM</span>
+        <textarea class="col-8 textInput1"></textarea>
+        <button class="col-2 saveBtn"><i class="fa-regular fa-floppy-disk"></i></button>
       </div>
-       <div class="row w-75" id="hour-11">
-        <span class="hour col-2">11AM</span>
-        <textarea class="col-8"></textarea>
-        <button class="col-2"></button>
+       <div class="row w-75" id="hour-11-container">
+        <span class="hour col-2"><span class="hourNumbers" id="hour-11">11</span>AM</span>
+        <textarea class="col-8 textInput2"></textarea>
+        <button class="col-2 saveBtn"><i class="fa-regular fa-floppy-disk"></i></button>
       </div>
-       <div class="row w-75" id="hour-12">
-        <span class="hour col-2">12PM</span>
-        <textarea class="col-8"></textarea>
-        <button class="col-2"></button>
+       <div class="row w-75" id="hour-12-container">
+        <span class="hour col-2"><span class="hourNumbers" id="hour-12 hourNumbers">12</span>PM</span>
+        <textarea class="col-8 textInput3"></textarea>
+        <button class="col-2 saveBtn"><i class="fa-regular fa-floppy-disk"></i></button>
       </div>
-       <div class="row w-75" id="hour-13">
-        <span class="hour col-2">1PM</span>
-        <textarea class="col-8"></textarea>
-        <button class="col-2"></button>
+       <div class="row w-75" id="hour-13-container">
+        <span class="hour col-2"><span class="hourNumbers" id="hour-13 hourNumbers">1</span>PM</span>
+        <textarea class="col-8 textInput4"></textarea>
+        <button class="col-2 saveBtn"><i class="fa-regular fa-floppy-disk"></i></button>
       </div>
-       <div class="row w-75" id="hour-14">
-        <span class="hour col-2">2PM</span>
-        <textarea class="col-8"></textarea>
-        <button class="col-2"></button>
+       <div class="row w-75" id="hour-14-container">
+        <span class="hour col-2"><span class="hourNumbers" id="hour-14 hourNumbers">2</span>PM</span>
+        <textarea class="col-8 textInput5"></textarea>
+        <button class="col-2 saveBtn"><i class="fa-regular fa-floppy-disk"></i></button>
       </div>
-       <div class="row w-75" id="hour-15">
-        <span class="hour col-2">3PM</span>
-        <textarea class="col-8"></textarea>
-        <button class="col-2"></button>
+       <div class="row w-75" id="hour-15-container">
+        <span class="hour col-2"><span class="hourNumbers" id="hour-15 hourNumbers">3</span>PM</span>
+        <textarea class="col-8 textInput6"></textarea>
+        <button class="col-2 saveBtn"><i class="fa-regular fa-floppy-disk"></i></button>
       </div>
-       <div class="row w-75" id="hour-16">
-        <span class="hour col-2">4PM</span>
-        <textarea class="col-8"></textarea>
-        <button class="col-2"></button>
+       <div class="row w-75" id="hour-16-container">
+        <span class="hour col-2"><span class="hourNumbers" id="hour-16 hourNumbers">4</span>PM</span>
+        <textarea class="col-8 textInput7"></textarea>
+        <button class="col-2 saveBtn"><i class="fa-regular fa-floppy-disk"></i></button>
       </div>
        <div class="row w-75" id="hour-17">
-        <span class="hour col-2">5PM</span>
-        <textarea class="col-8"></textarea>
-        <button class="col-2"></button>
+        <span class="hour col-2"><span class="hourNumbers" id="hour-17 hourNumbers">5</span>PM</span>
+        <textarea class="col-8 textInput8"></textarea>
+        <button class="col-2 saveBtn"><i class="fa-regular fa-floppy-disk"></i></button>
       </div>
-      <!-- Timeblocks go here -->
     </div>
-
+    
+    <script src="https://kit.fontawesome.com/5e4f63a640.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/JS/script.js"></script>
