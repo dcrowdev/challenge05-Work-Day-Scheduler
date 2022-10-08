@@ -40,4 +40,10 @@ $('.textInput15').val(localStorage.getItem("15"));
 $('.textInput16').val(localStorage.getItem("16"));
 $('.textInput17').val(localStorage.getItem("17"));
 
+
+$('#clearPlanner').click(function () {
+localStorage.clear();
+location.reload();
+});
+
 });
