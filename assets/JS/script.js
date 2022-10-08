@@ -21,32 +21,23 @@ else if ($('.textInput').eq(i).data('value') == formattedHour) {
 
 
 
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
 $('.saveBtn').click(function () {
-$('.textInput').append(localStorage.getItem('timeLog'));
-// inputStorageArr.push(timeLog);
-// localStorage.setItem("timeLog", JSON.stringify(timeLog));
-// console.log(timeLog);
+var time = $(this).attr('id');
+var value = $(this).siblings('.textInput').val();
+if(value) {
+localStorage.setItem(time, value);
+}
 });
 
 
-
-
-
-localStorage.getItem('Key').append($(this.siblings('.textInput')));
+$('.textInput9').val(localStorage.getItem("9"));
+$('.textInput10').val(localStorage.getItem("10"));
+$('.textInput11').val(localStorage.getItem("11"));
+$('.textInput12').val(localStorage.getItem("12"));
+$('.textInput13').val(localStorage.getItem("13"));
+$('.textInput14').val(localStorage.getItem("14"));
+$('.textInput15').val(localStorage.getItem("15"));
+$('.textInput16').val(localStorage.getItem("16"));
+$('.textInput17').val(localStorage.getItem("17"));
 
 });
