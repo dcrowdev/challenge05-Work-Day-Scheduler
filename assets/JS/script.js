@@ -1,32 +1,29 @@
 $(document).ready(function() {
 var formattedCurrentDayName = moment().format('dddd')
 var formattedCurrentDay = moment().format('MMM Do YYYY, h:mm a');
-var formattedHour = moment().format('h');
-var hourArr = $('.hourNumbers');
+var formattedHour = moment().format('H');
 $('#currentDay').text(formattedCurrentDayName);
 $('#currentDate').text(formattedCurrentDay);
-console.log(formattedHour);
-console.log( $('.hourNumbers')[0].innerHTML);
-
-for (let i = 0; i < hourArr.length; i++) {
 
 
-if (formattedHour == hourArr[i].innerHTML) {
-$(`.textInput${[i]}`).addClass('present');
-} 
-else if (formattedHour > hourArr[i].innerHTML) {
-$(`.textInput${[i]}`).addClass('past');
+
+for (let i = 0; i < $('.textInput').length; i++) {
+if ($('.textInput').eq(i).data('value') > formattedHour) {
+($('.textInput')).eq(i).addClass('future')
 }
-else if (formattedHour < hourArr[i].innerHTML) {
-$(`.textInput${[i]}`).addClass('future');
+else if ($('.textInput').eq(i).data('value') < formattedHour) {
+($('.textInput')).eq(i).addClass('past')
 }
-
+else if ($('.textInput').eq(i).data('value') == formattedHour) {
+($('.textInput')).eq(i).addClass('present')
+}
 }
 
 
 
 
 
+ 
 
 
 
@@ -39,11 +36,17 @@ $(`.textInput${[i]}`).addClass('future');
 
 
 
+$('.saveBtn').click(function () {
+$('.textInput').append(localStorage.getItem('timeLog'));
+// inputStorageArr.push(timeLog);
+// localStorage.setItem("timeLog", JSON.stringify(timeLog));
+// console.log(timeLog);
+});
 
 
 
 
 
-
+localStorage.getItem('Key').append($(this.siblings('.textInput')));
 
 });
